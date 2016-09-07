@@ -1,0 +1,39 @@
+<% include layouts/layout %>
+
+<!-- Restaurants -->
+<!-- Page Content -->
+<div id="customer-history" class="weat-content">
+        <div class="container">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3>Customer History</h3>
+            </div>
+            <div class="panel-body">
+              <table class="table table-striped">
+                <thead>
+                    <tr>
+                      <td>Name</td>
+                      <td>Email</td>
+                      <td>Age</td>
+                      <td>Gender</td>
+                      <td>Ethnicity</td>
+                      <td>Occupation</td>                      
+                    </tr>
+                </thead>
+                <tbody data-bind="foreach: customers">
+                    <tr>
+                        <td data-bind="text: firstName + ' ' + lastName"></td>
+                        <td data-bind="text: email"></td>
+                        <td data-bind="text: dob"></td>
+                        <td data-bind="text: gender"></td>
+                        <td data-bind="text: ethnicity"></td>
+                        <td data-bind="text: occupation"></td>
+                    </tr>
+                </tbody>
+              </table> 
+            </div>
+          </div> 
+      </div>
+          
+
+<script src="/scripts/admin-analytics.js"></script>

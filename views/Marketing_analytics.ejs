@@ -1,0 +1,96 @@
+<% include layouts/layout %>
+
+
+<div class="intro">
+
+        <div class="container" id="analytics-home">
+
+        	<div class="row">
+
+                <h1 class="page-header">Marketing and Analytics</h1>
+                <div class="col-md-4">
+                    <div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-shopping-cart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge" style="font-size:20px;"><%= analyticData.numbOfOrders %></div>
+                                    <div style="font-size:30px;">Orders</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-usd fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge" style="font-size:20px;">$<%= analyticData.totalSales %></div>
+                                    <div style="font-size:30px;">In Sales</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        </a>
+                    </div>
+                </div>
+
+
+                <div class="col-md-4">
+                    <div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <i class="fa fa-heart fa-5x"></i>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge" style="font-size:20px;"><%= analyticData.topSeller %></div>
+                                    <div style="font-size:30px;">Top Seller</div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <h2>Daily Orders</h2>
+
+                <div>
+                <canvas id="clients" width="800" height="250" style="background-color:white;"></canvas>
+            </div>
+
+            <br>
+
+               
+        <div class"row">
+            <div class="col-md-4 col-md-offset-2">
+            <a href="/custom_reports" style="background-color:#5dade2" class="btn btn-info btn-lg" role="button">Create Custom Report</a>
+            </div>
+
+            <div class="col-md-2">
+            <a href="/view_customers" style="background-color:#9b59b6; border-color: transparent;" class="btn btn-info btn-lg" role="button">View Your Customers</a>
+        </div>
+    </div>
+                
+
+<script src="./bower_components/Chart.js/Chart.js"></script>
+<script src="/scripts/admin-analytics.js"></script>
+
+
+
+
+
+
+
+
+
+

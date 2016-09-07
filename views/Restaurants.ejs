@@ -1,0 +1,34 @@
+<% include layouts/layout %>
+
+<!-- Restaurants -->
+<!-- Page Content -->
+<div class="weat-content">
+    <div class="container">
+        <% if(restaurants.length > 0){ %>
+        <% restaurants.forEach(function(restaurant) { %>
+        <div class="row">
+            <div class="col-md-7">
+                <a href=/restaurants/<%= restaurant.name %>>
+                    <% if(restaurant.imgPath != null && restaurant.imgPath.length > 1){ %>
+                    <img class="img-responsive" src=<%= restaurant.imgPath %> alt="">
+                    <% } %>
+                </a>
+            </div>
+            <div class="col-md-5">
+                <h3><%= restaurant.displayName %></h3>
+                <h4><%= restaurant.mainFoodType %></h4>
+                <p><%= restaurant.longDescription %></p>
+                <a class="btn btn-primary" href=/restaurants/<%= restaurant.name %> >View Menu</a>
+            </div>
+        </div>
+        <hr>
+
+        <% })} else {%>
+        <div class="row text-center">
+            <h3> Sorry! No results found. </h3>
+        </div>
+        <%}%>
+
+    </div>
+</div>
+
